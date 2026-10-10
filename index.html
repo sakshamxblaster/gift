@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>One Month Together</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="hero">
+  <small>Our first milestone</small>
+  <h1><span id="n1"></span> <em>&amp;</em> <span id="n2"></span></h1>
+  <p id="sub">One month of us</p>
+  <div class="count">
+    <div><b id="d">0</b><span>Days</span></div>
+    <div><b id="h">0</b><span>Hours</span></div>
+    <div><b id="m">0</b><span>Minutes</span></div>
+  </div>
+  <button class="btn" onclick="document.getElementById('songsec').scrollIntoView()">Press play, then read ♥</button>
+</section>
+
+<section id="songsec" class="reveal" style="text-align:center">
+  <h2>Our Song 🎶</h2>
+  <div class="card" style="cursor:default;flex-direction:column;gap:6px;padding:34px 20px">
+    <div class="stage" id="stage"><img class="l" data-cap="My life 💗" alt="" src="assets/her-hand.jpg"><img class="r" data-cap="Your servant" alt="" src="assets/his-hand.jpg"><img class="z" data-cap="My life & your servant ♥" alt="" src="assets/joined-hands.jpg"><img class="z" data-cap="My life 💗" alt="" src="assets/her-1.jpg"><img class="z" data-cap="Your servant" alt="" src="assets/him-1.jpg"><img class="z contain" data-cap="My life 💗" alt="" src="assets/her-2.jpg"><img class="z" data-cap="Your servant" alt="" src="assets/him-2.jpg"></div>
+    <div class="cap" id="cap"></div>
+    <h3 style="font-family:'Playfair Display',serif">Itni Si Baat Hai</h3>
+    <p style="color:var(--soft)">Azhar</p>
+    <p style="color:var(--soft);margin-top:8px">Some songs say it better than I can. This one is for you, Tanu.</p>
+    <audio id="song" preload="metadata" playsinline><source src="assets/song.mp3" type="audio/mpeg"><source src="assets/song.m4a" type="audio/mp4"></audio>
+    <button type="button" class="btn" id="play" style="margin:14px 0 0">&#9654; Play our song</button>
+    <input type="range" id="seek" min="0" max="100" value="0" aria-label="Song position" style="width:100%;max-width:320px;accent-color:var(--accent);margin-top:10px">
+    <div class="time" id="time">0:00 / 0:00</div>
+    <div class="status" id="status"></div>
+  </div>
+</section>
+
+<section id="story" class="reveal">
+  <h2>Our Story So Far</h2>
+  <div class="tl" id="tl"></div>
+</section>
+
+<section class="reveal" style="text-align:center">
+  <h2>Pehla Gulaab 🌹</h2>
+  <div class="card" style="cursor:default;flex-direction:column;gap:14px;padding:22px 16px">
+    <img src="assets/rose.jpg" alt="The first rose" style="width:100%;border-radius:12px">
+    <p style="color:var(--soft)">Pehla gulaab, jo tumne mujhe diya.</p>
+  </div>
+</section>
+
+<section class="reveal" style="text-align:center">
+  <h2>79 Baar 💗</h2>
+  <div class="big" id="cnt">0</div>
+  <p style="color:var(--soft);max-width:520px;margin:0 auto 28px">Discord mein “I love you” search kiya toh 79 messages mile. Aur tumhare har ek ne mujhe blush kara diya 😊</p>
+  <p style="color:var(--soft);font-size:.8rem;margin:0 0 8px">Swipe karo →</p>
+  <div class="shots"><img alt="Discord search: I love you" src="assets/shot-1.jpg"><img alt="Discord search: I love you" src="assets/shot-2.jpg"><img alt="Discord search: I love you" src="assets/shot-3.jpg"><img alt="Discord search: I love you" src="assets/shot-4.jpg"><img alt="Discord search: I love you" src="assets/shot-5.jpg"><img alt="Discord search: I love you" src="assets/shot-6.jpg"><img alt="Discord search: I love you" src="assets/shot-7.jpg"><img alt="Discord search: I love you" src="assets/shot-8.jpg"></div>
+  <div class="chat">
+    <div class="bub"><small>TANU</small>I love you more than anything 💗</div>
+    <div class="bub"><small>TANU</small>Aap enough ho mere liye, genuinely ❤️</div>
+    <div class="bub"><small>TANU</small>I love you, that's it. Unko bolne do, kuch bhi problem hoga, I'm with you no matter what ❤️</div>
+    <div class="bub"><small>TANU</small>Aur jaise bhi ho aap, I love you ❤️</div>
+    <div class="bub"><small>TANU</small>I love you too qt ❤️</div>
+  </div>
+</section>
+
+<section class="reveal">
+  <h2>Why I Like You</h2>
+  <p style="text-align:center;color:var(--soft);margin:-20px 0 28px">Tap a card</p>
+  <div class="grid" id="cards"></div>
+</section>
+
+
+
+<section class="reveal" style="text-align:center">
+  <h2>A Little Note</h2>
+  <div class="note" id="note"></div>
+  <button class="btn" style="margin:0 0 28px" id="open">Open letter 💌</button>
+  <button class="btn" id="lang" style="margin:0 0 28px 8px;background:var(--accent2);color:var(--ink);box-shadow:none">Read in English</button>
+  <div class="letter" id="letter"></div>
+</section>
+
+<footer id="foot"></footer>
+
+<script src="script.js"></script>
+</body>
+</html>
